@@ -447,6 +447,39 @@
           "kind": "FieldDefinition",
           "name": {
             "kind": "Name",
+            "value": "getOptimizedQuery"
+          },
+          "arguments": [
+            {
+              "kind": "InputValueDefinition",
+              "name": {
+                "kind": "Name",
+                "value": "queryString"
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": {
+                    "kind": "Name",
+                    "value": "String"
+                  }
+                }
+              }
+            }
+          ],
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
             "value": "getCollection"
           },
           "arguments": [
@@ -1535,6 +1568,60 @@
           },
           "arguments": [],
           "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "featureImg"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "excerpt"
+          },
+          "arguments": [],
+          "type": {
+            "kind": "NonNullType",
+            "type": {
+              "kind": "NamedType",
+              "name": {
+                "kind": "Name",
+                "value": "String"
+              }
+            }
+          }
+        },
+        {
+          "kind": "FieldDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "date"
+          },
+          "arguments": [],
+          "type": {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
@@ -1553,7 +1640,7 @@
             "kind": "NamedType",
             "name": {
               "kind": "Name",
-              "value": "String"
+              "value": "JSON"
             }
           }
         }
@@ -2313,13 +2400,55 @@
           "kind": "InputValueDefinition",
           "name": {
             "kind": "Name",
-            "value": "body"
+            "value": "featureImg"
           },
           "type": {
             "kind": "NamedType",
             "name": {
               "kind": "Name",
               "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "excerpt"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "date"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "String"
+            }
+          }
+        },
+        {
+          "kind": "InputValueDefinition",
+          "name": {
+            "kind": "Name",
+            "value": "body"
+          },
+          "type": {
+            "kind": "NamedType",
+            "name": {
+              "kind": "Name",
+              "value": "JSON"
             }
           }
         }

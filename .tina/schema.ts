@@ -23,22 +23,41 @@ export default defineSchema({
     {
       label: "Blog Posts",
       name: "post",
+      format: "mdx",
       path: "content/post",
       fields: [
         {
           type: "string",
           label: "Title",
+          required: true,
           name: "title",
         },
         {
+          type: "image",
+          name: "featureImg",
+          required: true,
+          label: "Feature Image",
+        },
+        {
           type: "string",
-          label: "Blog Post Body",
-          name: "body",
-          isBody: true,
+          label: "Excerpt",
+          required: true,
+          name: "excerpt",
+        },
+        {
+          type: "datetime",
+          label: "Posted Date",
+          name: "date",
           ui: {
-            component: "textarea",
+            dateFormat: "MMMM DD YYYY",
+            timeFormat: "hh:mm A",
           },
         },
+        {
+          type: "rich-text",
+          label: "Body",
+          name: "body"
+        }
       ],
     },
   ],

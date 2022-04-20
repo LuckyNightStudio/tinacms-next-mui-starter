@@ -42,6 +42,7 @@ interface Connection {
 }
 
 type Query {
+  getOptimizedQuery(queryString: String!): String
   getCollection(collection: String): Collection!
   getCollections: [Collection!]!
   node(id: String): Node!
@@ -104,8 +105,11 @@ type PageConnection implements Connection {
 }
 
 type Post {
-  title: String
-  body: String
+  title: String!
+  featureImg: String!
+  excerpt: String!
+  date: String
+  body: JSON
 }
 
 type PostDocument implements Node & Document {
@@ -149,7 +153,10 @@ input PageMutation {
 
 input PostMutation {
   title: String
-  body: String
+  featureImg: String
+  excerpt: String
+  date: String
+  body: JSON
 }
 
 schema {

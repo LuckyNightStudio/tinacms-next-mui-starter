@@ -4,5 +4,8 @@ fragment PageParts on Page {
 
 fragment PostParts on Post {
   title
+  featureImg
+  excerpt
+  date
   body
 }
