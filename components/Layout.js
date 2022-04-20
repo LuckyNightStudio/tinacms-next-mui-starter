@@ -1,28 +1,20 @@
-import Link from 'next/link'
-import Head from 'next/head'
+import { Box, ThemeProvider } from "@mui/material";
+import { AppHead } from "./AppHeader";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
+import { theme } from "../utils/theme";
 
-export const Layout = (props) => {
+export const Layout = ({ children, title }) => {
   return (
-    <div
-      style={{
-        margin: '3rem',
-      }}
-    >
-      <Head>
-        <title>Tina App</title>
-        <meta name="description" content="A TinaCMS Application" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <header>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        {' | '}
-        <Link href="/posts">
-          <a>Posts</a>
-        </Link>
-      </header>
-      <main>{props.children}</main>
-    </div>
+    <ThemeProvider theme={theme}>
+      <AppHead title={title} />
+      <Box sx={{ overflowX: 'clip' }}>
+        <Header />
+        <main style={{ position: 'relative'}}>
+          {children}
+        </main>
+        <Footer />
+      </Box>
+    </ThemeProvider>
   )
 }
